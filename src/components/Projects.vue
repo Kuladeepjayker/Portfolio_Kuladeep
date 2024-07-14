@@ -73,9 +73,14 @@ export default {
     text-align: center;
 }
 
-@media (min-width: 768px) {
-.skills-grid {
-    grid-template-columns: repeat(3, 1fr);
+@media (min-width: 430px) {
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 </style>

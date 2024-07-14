@@ -7,7 +7,7 @@
           <h1 class="text-2xl text-white md:text-7xl space-x-5 transform transition duration-500 hover:scale-110">Work Experience</h1>
       </div>
       <div class="skills-grid mt-9 opacity-80">
-          <div class="box-content h-62 w-62 p-4 bg-gray-700 shadow-lg shadow-blue-500/50 rounded-lg">
+          <div class="box-content h-72 w-72 p-4 bg-gray-700 shadow-lg shadow-blue-500/50 rounded-lg">
               <div class="mb-5">
                   <span class="text-white">
                       <a href="https://www.cyrrup.com/" target="_blank" class="text-red-400 hover:underline cursor-pointer">Cyrrup Solutions(3'Years)</a>
@@ -51,8 +51,13 @@ export default {
 }
 
 @media (min-width: 768px) {
-.skills-grid {
-  grid-template-columns: repeat(2, 1fr);
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 </style>

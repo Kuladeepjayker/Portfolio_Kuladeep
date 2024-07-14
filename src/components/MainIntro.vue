@@ -15,23 +15,23 @@
         <div class="mt-9 flex justify-center md:justify-start">
           <span @click="skillsfunction()" class="icon-wrapper flex flex-col items-center cursor-pointer">
             <img src="../assets/skills.png" alt="skills" class=" transform transition duration-500 hover:scale-110">
-            <span class="text-white">Skills</span>
+            <span class="textSize text-white">Skills</span>
           </span>
           <span @click="projectsfunction()" class="icon-wrapper flex flex-col items-center cursor-pointer">
             <img src="../assets/project.png" alt="projects" class=" transform transition duration-500 hover:scale-110">
-            <span class="text-white">Projects</span>
+            <span class="textSize text-white">Projects</span>
           </span>
           <span @click="workfunction()" class="icon-wrapper flex flex-col items-center cursor-pointer">
             <img src="../assets/work.png" alt="work" class=" transform transition duration-500 hover:scale-110">
-            <span class="text-white">Work</span>
+            <span class="textSize text-white">Work</span>
           </span>
           <span @click="educationfunction()" class="icon-wrapper flex flex-col items-center cursor-pointer">
             <img src="../assets/graduate.png" alt="graduate" class=" transform transition duration-500 hover:scale-110">
-            <span class="text-white">Study</span>
+            <span class="textSize text-white">Study</span>
           </span>
           <span @click="infofunction()" class="icon-wrapper flex flex-col items-center cursor-pointer">
             <img src="../assets/info.png" alt="graduate" class=" transform transition duration-500 hover:scale-110">
-            <span class="text-white">About</span>
+            <span class="textSize text-white">About</span>
           </span>
         </div>
       </div>
@@ -78,6 +78,17 @@ export default {
     width: 5rem;
     margin-top: 6rem;
     margin-right: 6rem;
+  }
+}
+@media (max-width: 450px){
+  .textSize {
+    font-size:small;
+  }
+}
+
+@media (max-width: 768px) {
+  .textSize {
+    font-size: smaller
   }
 }
 </style>

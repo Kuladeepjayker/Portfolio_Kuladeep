@@ -9,31 +9,31 @@
     <div class="skills-grid mt-9">
       <div class="icon-wrapper flex flex-col items-center cursor-pointer">
         <img src="../assets/python.png" alt="Python" class="transform transition duration-500 hover:scale-110">
-        <span class="text-white">Python</span>
+        <span class="textSize text-white">Python</span>
       </div>
       <div class="icon-wrapper flex flex-col items-center cursor-pointer">
         <img src="../assets/document.png" alt="document" class="transform transition duration-500 hover:scale-110">
-        <span class="text-white">Vue.js</span>
+        <span class="textSize text-white">Vue.js</span>
       </div>
       <div class="icon-wrapper flex flex-col items-center cursor-pointer">
         <img src="../assets/structure.png" alt="react" class="transform transition duration-500 hover:scale-110">
-        <span class="text-white">React.js</span>
+        <span class="textSize text-white">React.js</span>
       </div>
       <div class="icon-wrapper flex flex-col items-center cursor-pointer">
         <img src="../assets/flutter.png" alt="flutter" class="transform transition duration-500 hover:scale-110">
-        <span class="text-white">Flutter</span>
+        <span class="textSize text-white">Flutter</span>
       </div>
       <div class="icon-wrapper flex flex-col items-center cursor-pointer">
         <img src="../assets/java-script.png" alt="javascript" class="transform transition duration-500 hover:scale-110">
-        <span class="text-white">JavaScript</span>
+        <span class="textSize text-white">JavaScript</span>
       </div>
       <div class="icon-wrapper flex flex-col items-center cursor-pointer">
         <img src="../assets/html-5.png" alt="html" class="transform transition duration-500 hover:scale-110">
-        <span class="text-white">HTML</span>
+        <span class="textSize text-white">HTML</span>
       </div>
       <div class="icon-wrapper flex flex-col items-center cursor-pointer">
         <img src="../assets/css-3.png" alt="css" class="transform transition duration-500 hover:scale-110">
-        <span class="text-white">CSS</span>
+        <span class="textSize text-white">CSS</span>
       </div>
     </div>
   </div>
@@ -67,10 +67,26 @@ export default {
 .icon-wrapper {
   text-align: center;
 }
+@media (max-width: 450px){
+  .textSize {
+    font-size:small;
+  }
+}
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
+  .textSize {
+    font-size: smaller
+  }
+}
+
+@media (min-width: 450px) {
   .skills-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 </style>

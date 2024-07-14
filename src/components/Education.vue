@@ -51,8 +51,8 @@ export default {
 }
 
 @media (min-width: 768px) {
-.skills-grid {
-    grid-template-columns: repeat(3, 1fr);
-}
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 </style>
