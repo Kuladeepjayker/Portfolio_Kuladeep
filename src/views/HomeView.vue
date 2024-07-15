@@ -2,14 +2,14 @@
     <div class="flex flex-col md:flex-row h-screen">
         <!-- Left Box -->
         <div class="bg-black flex items-center justify-center md:w-1/2 w-full">
-            <img src="../assets/kuladeep.jpg" alt="Image-developer" class="imageDiv transform transition-transform duration-500 ease-in-out scale-75 hover:scale-100">
+            <img src="../assets/Untitled.png" alt="Image-developer" class="imageDiv transform transition-transform duration-500 ease-in-out scale-75 hover:scale-100">
         </div>
 
         <!-- Right Box -->
         <div class="bg-black flex items-center justify-center md:w-1/2 w-full p-8">
 
             <div class="icon-wrapper absolute top-4">
-                <div class="mt-9 border-2 border-red-400 px-4 py-1 rounded-lg inline-block">
+                <div class="mt-9 border-2 border-red-400 px-3 py-1 rounded-lg inline-block">
                     <a :href="pdfUrl" download="KuladeepResume.pdf">
                         <img src="../assets/inbox.png" alt="Resume" class="inboxIcon transform transition duration-500 hover:scale-110">
                         <span class="textSize text-white">Resume</span>
@@ -62,21 +62,14 @@ export default {
 </script>
 
 <style scoped>
-.icon-wrapper {
-    display: inline-block;
-    height: 1rem;
-    width: 1rem;
-    margin-top: 1rem;
-    margin-right: 1rem;
-    text-align: center;
-  }
+
   
   @media (min-width: 768px) {
     .icon-wrapper {
       height: 1rem;
       width: 1rem;
       margin-top: 1rem;
-      margin-left: 40rem;
+      margin-left: 45rem;
     }
     .inboxIcon{
         height: 3rem;
@@ -84,10 +77,10 @@ export default {
     }
     .imageDiv{
         width: 30rem;
-        height: 50rem;
+        height: 55rem;
     }
 }
-@media (max-width: 430px){
+@media (max-width: 520px){
     .icon-wrapper {
       height: 1rem;
       width: 1rem;
@@ -100,10 +93,10 @@ export default {
     }
 }
 
-@media (max-width: 450px){
+@media (max-width: 520px){
     .imageDiv{
         width: 15rem;
-        height: 25rem;
+        height: 30rem;
     }
 }
 

@@ -1,14 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import SplashScreen from '../views/SplashScreen.vue'
 import HomeView from '../views/HomeView.vue'
 const routes = [
   {
     path: '/',
-    name: 'SplashScreen',
-    component: SplashScreen
-  },
-  {
-    path: '/HomeView',
     name: 'HomeView',
     component: HomeView
   },
