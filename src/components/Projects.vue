@@ -34,8 +34,16 @@
             <div class="box-content h-55 w-55 p-4 bg-gray-700 shadow-lg shadow-blue-500/50 rounded-lg">
                 <div class="mb-5">
                     <span class="text-white">
-                        <a href="" target="_blank" class="text-red-400 hover:underline cursor-pointer">UI/UX</a>
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7195738254887772160/" target="_blank" class="text-red-400 hover:underline cursor-pointer">UI/UX</a>
                         <p>Designed UI/UX designes for <u>3 start-up companies</u> for mobile application development.</p>
+                    </span>
+                </div>
+            </div>
+            <div class="box-content h-55 w-55 p-4 bg-gray-700 shadow-lg shadow-blue-500/50 rounded-lg">
+                <div class="mb-5">
+                    <span class="text-white">
+                        <a href="https://kuladeepjayker.github.io/Assignment_Flux/" target="_blank" class="text-red-400 hover:underline cursor-pointer">Template</a>
+                        <p>Designed UI/UX for interview purpose. <u>Desktop % Mobile(390px)</u> view for web application development.</p>
                     </span>
                 </div>
             </div>
