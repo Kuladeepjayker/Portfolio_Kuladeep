@@ -10,7 +10,7 @@
 
             <div class="icon-wrapper absolute top-4">
                 <div class="mt-9 border-2 border-red-400 px-4 py-1 rounded-lg inline-block">
-                    <a :href="pdfUrl" download="KuladeepResume.pdf">
+                    <a :href="pdfUrl" download="Kuladeep_Vue_Resume.pdf">
                         <img src="../assets/inbox.png" alt="Resume" class="inboxIcon transform transition duration-500 hover:scale-110">
                         <span class="textSize text-white">Resume</span>
                     </a>
@@ -41,8 +41,8 @@ export default {
         return {
             publicPath: process.env.BASE_URL,
             currentSection: 'mainIntro',
-            pdfUrl: `${process.env.BASE_URL}asset/KuladeepResume.pdf`,
-            pdfFileName: 'KuladeepResume.pdf'
+            pdfUrl: `${process.env.BASE_URL}asset/Kuladeep_Vue_Resume.pdf`,
+            pdfFileName: 'Kuladeep_Vue_Resume.pdf'
         }
     },
     components: {
