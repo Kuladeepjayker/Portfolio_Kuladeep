@@ -41,7 +41,7 @@ export default {
         return {
             publicPath: process.env.BASE_URL,
             currentSection: 'mainIntro',
-            pdfUrl: `${process.env.BASE_URL}assets/KuladeepResume.pdf`,
+            pdfUrl: `${process.env.BASE_URL}asset/KuladeepResume.pdf`,
             pdfFileName: 'KuladeepResume.pdf'
         }
     },
