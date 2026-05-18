@@ -7,7 +7,7 @@
             <h1 class="text-2xl text-white md:text-7xl transform transition duration-500 hover:scale-110">Projects</h1>
         </div>
         <div class="skills-grid mt-9 opacity-80">
-            <div class="box-content h-55 w-55 p-4 bg-gray-700 shadow-lg shadow-blue-500/50 rounded-lg">
+            <div class="project-card bg-gray-700 shadow-lg shadow-blue-500/50 rounded-lg">
                 <div class="mb-5">
                     <span class="text-white">
                         <a href="https://www.linkedin.com/feed/update/urn:li:activity:7178698350643335169/" target="_blank" class="text-red-400 hover:underline cursor-pointer">Vue App</a>
@@ -15,7 +15,7 @@
                     </span>
                 </div>
             </div>
-            <div class="box-content h-55 w-55 p-4 bg-gray-700 shadow-lg shadow-blue-500/50 rounded-lg">
+            <div class="project-card bg-gray-700 shadow-lg shadow-blue-500/50 rounded-lg">
                 <div class="mb-5">
                     <span class="text-white">
                         <a href="https://www.linkedin.com/feed/update/urn:li:activity:7191691445529899008/" target="_blank" class="text-red-400 hover:underline cursor-pointer">Flutter App</a>
@@ -23,7 +23,7 @@
                     </span>
                 </div>
             </div>
-            <div class="box-content h-55 w-55 p-4 bg-gray-700 shadow-lg shadow-blue-500/50 rounded-lg">
+            <div class="project-card bg-gray-700 shadow-lg shadow-blue-500/50 rounded-lg">
                 <div class="mb-5">
                     <span class="text-white">
                         <a href="" target="_blank" class="text-red-400 hover:underline cursor-pointer">Python AnyWhere</a>
@@ -31,7 +31,7 @@
                     </span>
                 </div>
             </div>
-            <div class="box-content h-55 w-55 p-4 bg-gray-700 shadow-lg shadow-blue-500/50 rounded-lg">
+            <div class="project-card bg-gray-700 shadow-lg shadow-blue-500/50 rounded-lg">
                 <div class="mb-5">
                     <span class="text-white">
                         <a href="https://www.linkedin.com/feed/update/urn:li:activity:7195738254887772160/" target="_blank" class="text-red-400 hover:underline cursor-pointer">UI/UX</a>
@@ -39,7 +39,7 @@
                     </span>
                 </div>
             </div>
-            <div class="box-content h-55 w-55 p-4 bg-gray-700 shadow-lg shadow-blue-500/50 rounded-lg">
+            <div class="project-card bg-gray-700 shadow-lg shadow-blue-500/50 rounded-lg">
                 <div class="mb-5">
                     <span class="text-white">
                         <a href="https://kuladeepjayker.github.io/Assignment_Flux/" target="_blank" class="text-red-400 hover:underline cursor-pointer">Template</a>
@@ -68,27 +68,23 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: min(100%, 64rem);
     padding: 20px;
 }
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+    gap: clamp(1rem, 4vw, 2rem);
+    width: 100%;
+}
+
+.project-card {
+    min-height: 11rem;
+    padding: clamp(1rem, 3vw, 1.25rem);
 }
 
 .icon-wrapper {
     text-align: center;
-}
-
-@media (min-width: 430px) {
-    .skills-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-@media (max-width: 768px) {
-    .skills-grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
 }
 </style>

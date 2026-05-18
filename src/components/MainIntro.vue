@@ -1,35 +1,35 @@
 <template>
-  <div>
+  <div class="intro-container">
       <div class="text-left">
         <div>
-          <h1 class="text-4xl text-white md:text-7xl">Hi, I'm Kuladeep</h1>
+          <h1 class="intro-title text-white">Hi, I'm Kuladeep</h1>
         </div>
         <div>
-          <h3 class="text-lg md:text-2xl mt-4 text-white">Skilled in developing quality products and solving complex problems, thriving on learning 
+          <h3 class="intro-copy mt-4 text-white">Skilled in developing quality products and solving complex problems, thriving on learning 
             new technologies, and staying updated with industry trends. Proficient in the <span class="bg-gray-700 text-white">Vue.js, React.js, UI/UX and 
             Flutter frameworks</span>, excelling at designing user-friendly interfaces and ensuring seamless 
             functionality. Committed to delivering excellence and eager to leverage expertise in 
             creating innovative solutions and driving business success.
           </h3>
         </div>
-        <div class="mt-9 flex justify-center md:justify-start">
-          <span @click="skillsfunction()" class="icon-wrapper flex flex-col items-center cursor-pointer">
+        <div class="intro-actions">
+          <span @click="skillsfunction()" class="nav-icon flex flex-col items-center cursor-pointer">
             <img src="../assets/skills.png" alt="skills" class=" transform transition duration-500 hover:scale-110">
             <span class="textSize text-white">Skills</span>
           </span>
-          <span @click="projectsfunction()" class="icon-wrapper flex flex-col items-center cursor-pointer">
+          <span @click="projectsfunction()" class="nav-icon flex flex-col items-center cursor-pointer">
             <img src="../assets/project.png" alt="projects" class=" transform transition duration-500 hover:scale-110">
             <span class="textSize text-white">Projects</span>
           </span>
-          <span @click="workfunction()" class="icon-wrapper flex flex-col items-center cursor-pointer">
+          <span @click="workfunction()" class="nav-icon flex flex-col items-center cursor-pointer">
             <img src="../assets/work.png" alt="work" class=" transform transition duration-500 hover:scale-110">
             <span class="textSize text-white">Work</span>
           </span>
-          <span @click="educationfunction()" class="icon-wrapper flex flex-col items-center cursor-pointer">
+          <span @click="educationfunction()" class="nav-icon flex flex-col items-center cursor-pointer">
             <img src="../assets/graduate.png" alt="graduate" class=" transform transition duration-500 hover:scale-110">
             <span class="textSize text-white">Study</span>
           </span>
-          <span @click="infofunction()" class="icon-wrapper flex flex-col items-center cursor-pointer">
+          <span @click="infofunction()" class="nav-icon flex flex-col items-center cursor-pointer">
             <img src="../assets/info.png" alt="graduate" class=" transform transition duration-500 hover:scale-110">
             <span class="textSize text-white">About</span>
           </span>
@@ -62,33 +62,47 @@ export default {
 }
 </script>
 
-<style>
-.icon-wrapper {
-  display: inline-block;
-  height: 3rem;
-  width: 3rem;
-  margin-top: 1rem;
-  margin-right: 1rem;
+<style scoped>
+.intro-container {
+  width: min(100%, 48rem);
+}
+
+.intro-title {
+  font-size: clamp(2.25rem, 8vw, 4.5rem);
+  line-height: 1.05;
+}
+
+.intro-copy {
+  font-size: clamp(1rem, 2.4vw, 1.5rem);
+  line-height: 1.5;
+}
+
+.intro-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(4.25rem, 1fr));
+  gap: clamp(1rem, 4vw, 2.5rem);
+  margin-top: clamp(2rem, 8vh, 5rem);
+}
+
+.nav-icon {
+  min-height: 4.75rem;
   text-align: center;
 }
 
-@media (min-width: 768px) {
-  .icon-wrapper {
-    height: 5rem;
-    width: 5rem;
-    margin-top: 6rem;
-    margin-right: 6rem;
-  }
-}
-@media (max-width: 450px){
-  .textSize {
-    font-size:small;
-  }
+.nav-icon img {
+  width: clamp(3rem, 8vw, 5rem);
+  height: clamp(3rem, 8vw, 5rem);
+  object-fit: contain;
 }
 
-@media (max-width: 768px) {
-  .textSize {
-    font-size: smaller
+.textSize {
+  font-size: clamp(0.75rem, 2vw, 0.95rem);
+}
+
+@media (min-width: 768px) {
+  .intro-actions {
+    grid-template-columns: repeat(5, max-content);
+    justify-content: start;
   }
 }
 </style>

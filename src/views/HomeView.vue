@@ -1,15 +1,15 @@
 <template>
-    <div class="flex flex-col md:flex-row h-screen">
+    <div class="home-shell">
         <!-- Left Box -->
-        <div class="bg-black flex items-center justify-center md:w-1/2 w-full">
-            <img src="../assets/Untitled.png" alt="Image-developer" class="imageDiv transform transition-transform duration-500 ease-in-out scale-75 hover:scale-100">
+        <div class="hero-pane">
+            <img src="../assets/Untitled.png" alt="Image-developer" class="imageDiv transform transition-transform duration-500 ease-in-out hover:scale-105">
         </div>
 
         <!-- Right Box -->
-        <div class="bg-black flex items-center justify-center md:w-1/2 w-full p-8">
+        <div class="content-pane">
 
-            <div class="icon-wrapper absolute top-4">
-                <div class="mt-9 border-2 border-red-400 px-3 py-1 rounded-lg inline-block">
+            <div class="resume-link">
+                <div class="border-2 border-red-400 px-3 py-1 rounded-lg inline-block">
                     <a :href="pdfUrl" download="KuladeepResume.pdf">
                         <img src="../assets/inbox.png" alt="Resume" class="inboxIcon transform transition duration-500 hover:scale-110">
                         <span class="textSize text-white">Resume</span>
@@ -62,52 +62,86 @@ export default {
 </script>
 
 <style scoped>
+.home-shell {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: #000;
+}
 
-  
-  @media (min-width: 768px) {
-    .icon-wrapper {
-      height: 1rem;
-      width: 1rem;
-      margin-top: 1rem;
-      margin-left: 45rem;
+.hero-pane,
+.content-pane {
+    width: 100%;
+    background: #000;
+}
+
+.hero-pane {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 1rem 1.5rem;
+}
+
+.content-pane {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: 5rem 1.25rem 2rem;
+}
+
+.resume-link {
+    position: absolute;
+    top: 1rem;
+    right: clamp(1rem, 4vw, 2.5rem);
+    z-index: 10;
+}
+
+.resume-link a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inboxIcon {
+    width: clamp(2rem, 7vw, 3rem);
+    height: clamp(2rem, 7vw, 3rem);
+}
+
+.imageDiv {
+    width: min(72vw, 20rem);
+    max-height: 42vh;
+    object-fit: contain;
+}
+
+.textSize {
+    font-size: clamp(0.65rem, 2vw, 0.85rem);
+}
+
+@media (min-width: 768px) {
+    .home-shell {
+        flex-direction: row;
     }
-    .inboxIcon{
-        height: 3rem;
-        width: 3rem;
+
+    .hero-pane,
+    .content-pane {
+        width: 50%;
+        min-height: 100vh;
     }
+
+    .hero-pane {
+        padding: 2rem;
+    }
+
+    .content-pane {
+        padding: 5rem 2rem 3rem;
+    }
+
     .imageDiv{
-        width: 30rem;
-        height: 55rem;
-    }
-}
-@media (max-width: 520px){
-    .icon-wrapper {
-      height: 1rem;
-      width: 1rem;
-      margin-top: 1rem;
-      margin-left: 15rem;
-    }
-    .inboxIcon{
-        height: 2rem;
-        width: 2rem;
-    }
-}
-
-@media (max-width: 520px){
-    .imageDiv{
-        width: 15rem;
-        height: 30rem;
-    }
-}
-
-@media (max-width: 768px) {
-  .textSize {
-    font-size: smaller
-  }
-}
-@media (max-width: 768px) {
-    .textSize {
-        font-size:x-small;
+        width: min(42vw, 30rem);
+        max-height: min(86vh, 55rem);
     }
 }
 </style>

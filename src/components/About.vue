@@ -8,15 +8,15 @@
         </div>
         <div class="text-white mt-9 opacity-80">
             <div>
-                <h1 class="text-5xl font-bold text-green-300">Get In Touch</h1>
-                <p class="text-2xl mt-9 text-gray-300">I'm actively connecting with peers who are into My Skill Set, Front-end Development, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                <h1 class="contact-title font-bold text-green-300">Get In Touch</h1>
+                <p class="contact-copy mt-9 text-gray-300">I'm actively connecting with peers who are into My Skill Set, Front-end Development, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
             </div>
             <div class="mt-9 border-2 border-green-500 p-2 rounded-lg inline-block">
-                <a href="mailto:kuldeep.marrapu@gmail.com" class="block text-white hover:bg-green-800 font-bold py-4 px-6 rounded text-2xl text-center">
+                <a href="mailto:kuldeep.marrapu@gmail.com" class="hello-button block text-white hover:bg-green-800 font-bold py-4 px-6 rounded text-center">
                     Say Hello!
                 </a>
             </div>
-            <div class="mt-9 flex flex-wrap justify-center space-x-6">
+            <div class="social-grid mt-9">
                 <span class="icon-wrapper">
                     <a href="https://www.linkedin.com/in/kuladeep-marrapu-311294134/" target="_blank" rel="noopener noreferrer" class="flex flex-col items-center cursor-pointer">
                         <img src="../assets/linkedin.png" alt="LinkedIn" class="transform transition duration-500 hover:scale-110">
@@ -59,6 +59,7 @@ export default {
 
 <style scoped>
 .skills-container {
+    width: min(100%, 52rem);
     padding: 20px;
 }
 
@@ -69,24 +70,38 @@ export default {
 
 .icon-wrapper {
     display: inline-block;
-    height: 3rem;
-    width: 3rem;
-    margin-top: 1rem;
-    margin-right: 1rem;
+    width: clamp(4rem, 12vw, 5rem);
     text-align: center;
+}
+
+.icon-wrapper img {
+    width: clamp(3rem, 9vw, 5rem);
+    height: clamp(3rem, 9vw, 5rem);
+    object-fit: contain;
+}
+
+.contact-title {
+    font-size: clamp(2rem, 8vw, 3rem);
+    line-height: 1.1;
+}
+
+.contact-copy,
+.hello-button {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    line-height: 1.45;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(4.5rem, 1fr));
+    gap: clamp(1rem, 4vw, 1.5rem);
+    justify-items: center;
+    width: 100%;
 }
 
 @media (min-width: 768px) {
     .text-left {
-        margin-bottom: 2rem; /* Example margin for larger screens */
+        margin-bottom: 2rem;
     }
-
-    .icon-wrapper {
-        height: 5rem;
-        width: 5rem;
-        margin-top: 1rem; /* Adjust as needed */
-        margin-right: 1rem; /* Adjust as needed */
-    }
-    
 }
 </style>

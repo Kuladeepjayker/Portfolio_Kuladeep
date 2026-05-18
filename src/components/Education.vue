@@ -7,7 +7,7 @@
             <h1 class="text-2xl text-white md:text-7xl transform transition duration-500 hover:scale-110">Study</h1>
         </div>
         <div class="skills-grid mt-9 opacity-80">
-            <div class="box-content h-72 w-72 p-4 bg-gray-700 shadow-lg shadow-blue-500/50 rounded-lg">
+            <div class="info-card bg-gray-700 shadow-lg shadow-blue-500/50 rounded-lg">
                 <div class="mb-5">
                     <span class="text-white">
                         <a href="https://www.kietgroup.com/" target="_blank" class="text-red-400 hover:underline cursor-pointer">Bachelor's Degree(4'Years)</a>
@@ -37,22 +37,24 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: min(100%, 56rem);
     padding: 20px;
 }
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(1rem, 4vw, 2rem);
+    width: 100%;
+}
+
+.info-card {
+    width: 100%;
+    max-width: 28rem;
+    padding: clamp(1rem, 4vw, 1.5rem);
 }
 
 .icon-wrapper {
     text-align: center;
-}
-
-@media (min-width: 768px) {
-    .skills-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
 }
 </style>

@@ -55,38 +55,29 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: min(100%, 48rem);
   padding: 20px;
 }
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(4.75rem, 1fr));
+  gap: clamp(1rem, 4vw, 2rem);
+  width: 100%;
 }
 
 .icon-wrapper {
   text-align: center;
-}
-@media (max-width: 450px){
-  .textSize {
-    font-size:small;
-  }
+  min-height: 5rem;
 }
 
-@media (max-width: 768px) {
-  .textSize {
-    font-size: smaller
-  }
+.icon-wrapper img {
+  width: clamp(3rem, 9vw, 5rem);
+  height: clamp(3rem, 9vw, 5rem);
+  object-fit: contain;
 }
 
-@media (min-width: 450px) {
-  .skills-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-@media (max-width: 768px) {
-  .skills-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.textSize {
+  font-size: clamp(0.75rem, 2vw, 0.95rem);
 }
 </style>
