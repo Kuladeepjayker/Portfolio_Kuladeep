@@ -2,7 +2,7 @@
     <div class="home-shell">
         <!-- Left Box -->
         <div class="hero-pane">
-            <img src="../assets/Untitled.png" alt="Image-developer" class="imageDiv transform transition-transform duration-500 ease-in-out hover:scale-105">
+            <img src="../assets/B&W.png" alt="Image-developer" class="imageDiv transform transition-transform duration-500 ease-in-out hover:scale-105">
         </div>
 
         <!-- Right Box -->
